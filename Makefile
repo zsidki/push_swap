@@ -6,29 +6,26 @@
 #    By: zsidki <zsidki@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/06/24 18:54:19 by zsidki            #+#    #+#              #
-#    Updated: 2021/06/24 18:54:22 by zsidki           ###   ########.fr        #
+#    Updated: 2021/07/02 17:17:33 by zsidki           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 .PHONY: all fclean clean re
 NAME = push_swap
 CC = gcc -g #-fsanitize=address
-FLAGS = -Wall -Werror -Wextra -I /usr/local/include -L /usr/local/lib/ -lmlx -framework OpenGL -framework AppKit
+FLAGS = -Wall -Werror -Wextra
 
-SRC = 		main.c \
+SRC = 	stack.c \
 
 
 all: $(NAME)
 $(NAME): $(SRC)
-	@cd libft ; make ; cd ..
-	@$(CC) -I. $(FLAGS) libft/libft.a $(SRC) -o $(NAME)
+	@$(CC) -I. $(FLAGS) $(SRC) -o $(NAME)
 
 clean:
-	@cd libft ; make clean ; cd ..
 	@rm -rf $(NAME)
 
 fclean: clean
-	@cd libft ; make fclean ; cd ..
 	@rm -rf $(NAME)
 
 re: fclean 
