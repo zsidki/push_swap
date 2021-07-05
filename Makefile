@@ -6,13 +6,13 @@
 #    By: zsidki <zsidki@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/06/24 18:54:19 by zsidki            #+#    #+#              #
-#    Updated: 2021/07/02 17:17:33 by zsidki           ###   ########.fr        #
+#    Updated: 2021/07/05 15:37:17 by zsidki           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 .PHONY: all fclean clean re
 NAME = push_swap
-CC = gcc -g #-fsanitize=address
+CC = gcc  #-fsanitize=address
 FLAGS = -Wall -Werror -Wextra
 
 SRC = 	stack.c \
