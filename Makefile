@@ -6,7 +6,7 @@
 #    By: zsidki <zsidki@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/06/24 18:54:19 by zsidki            #+#    #+#              #
-#    Updated: 2021/07/06 16:18:37 by zsidki           ###   ########.fr        #
+#    Updated: 2021/07/07 17:15:29 by zsidki           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,7 +15,7 @@ NAME = push_swap
 CC = gcc  #-fsanitize=address
 FLAGS = -Wall -Werror -Wextra
 
-SRC = 	stack.c src/sx.c\
+SRC = 	stack.c src/sx.c src/rx.c src/rrx.c src/px.c\
 
 
 all: $(NAME)

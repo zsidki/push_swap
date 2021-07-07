@@ -6,7 +6,7 @@
 /*   By: zsidki <zsidki@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/06 14:48:16 by zsidki            #+#    #+#             */
-/*   Updated: 2021/07/06 16:35:45 by zsidki           ###   ########.fr       */
+/*   Updated: 2021/07/07 16:38:32 by zsidki           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,6 @@ void    swap_a(t_stack *stack, int i)
     if(i == 0 )
         printf("sa\n");
     }
-    
 }
 void    swap_b(t_stack *stack, int i)
 {
@@ -48,3 +47,5 @@ void    swap_s(t_stack *a, t_stack *b)
     swap_b(b, 1);
     printf("ss\n");
 }
+
+

@@ -6,7 +6,7 @@
 /*   By: zsidki <zsidki@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/06 16:16:05 by zsidki            #+#    #+#             */
-/*   Updated: 2021/07/06 16:34:20 by zsidki           ###   ########.fr       */
+/*   Updated: 2021/07/07 17:15:20 by zsidki           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 # include <string.h>
 # include <limits.h>
 # include <stdio.h>
-
+# include <unistd.h>
 typedef struct s_stack
 {
 	int			top;
@@ -37,5 +37,13 @@ int	peek(t_stack *stack);
 void    swap_a(t_stack *stack, int i);
 void    swap_b(t_stack *stack, int i);
 void    swap_s(t_stack *a, t_stack *b);
+void    ra(t_stack *a);
+void    rb(t_stack *b);
+void    rr(t_stack *a, t_stack *b);
+void    rra(t_stack *a);
+void    rrb(t_stack *b);
+void    rrr(t_stack *a, t_stack *b);
+void    pa(t_stack *stack_a, t_stack *stack_b);
+void    pb(t_stack *stack_a, t_stack *stack_b);
 
 #endif

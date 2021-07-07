@@ -6,7 +6,7 @@
 /*   By: zsidki <zsidki@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/28 17:51:59 by zsidki            #+#    #+#             */
-/*   Updated: 2021/07/06 16:55:25 by zsidki           ###   ########.fr       */
+/*   Updated: 2021/07/07 17:25:09 by zsidki           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,12 +32,11 @@ void	stack_display(t_stack stack)
 {
 	int i;
 	i = stack.top;
-	
+
 	printf("******\n");
 	while(i >= 0)
 		printf("%d\n", stack.array[i--]);
 	printf("******\n");
-
 }
 
 int	stack_is_full(t_stack *stack)
@@ -87,7 +86,7 @@ int		main(int argc, char *argv[])
 	t_stack *a = create_stack(100);
 	t_stack *b = create_stack(100);
 	fill_a(argc, argv, a);
-	fill_a(argc, argv, b);
+	// fill_a(argc, argv, b);
 	// push(a, 10);
 	// push(a, 20);
 	// push(a, 30);
@@ -99,12 +98,16 @@ int		main(int argc, char *argv[])
 	// push(b, 30);
 	// push(b, 40);
 	// push(b, 50);
-	// printf("%d popped from stack\n", pop(stack));
+	//printf("%d popped from stack\n", pop(a));
 	// printf("top item is %d\n", peek(stack));
-	swap_a(a, 0);
-	swap_b(b, 0);
+	// swap_a(a, 0);
+	// swap_b(b, 0);
+	// rra(a);
+	stack_display(*b);
+	pb(a, b);
+	
 	stack_display(*a);
+	stack_display(*b);
 	
 	return (0);
 }
-
