@@ -6,21 +6,13 @@
 /*   By: zsidki <zsidki@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/28 17:51:59 by zsidki            #+#    #+#             */
-/*   Updated: 2021/07/05 15:38:10 by zsidki           ###   ########.fr       */
+/*   Updated: 2021/07/06 16:55:25 by zsidki           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <string.h>
-#include <limits.h>
-#include <stdio.h>
+#include "push_swap.h"
 
-struct s_stack
-{
-	int			top;
-	int			capacity;
-	int			*array;
-};
+
 
 struct	s_stack *create_stack(unsigned capacity)
 {
@@ -31,47 +23,88 @@ struct	s_stack *create_stack(unsigned capacity)
 	return (stack);
 }
 
-int	stack_is_full(struct s_stack *stack)
+int	stack_size(t_stack stack)
+{
+	return (stack.top + 1);
+}
+
+void	stack_display(t_stack stack)
+{
+	int i;
+	i = stack.top;
+	
+	printf("******\n");
+	while(i >= 0)
+		printf("%d\n", stack.array[i--]);
+	printf("******\n");
+
+}
+
+int	stack_is_full(t_stack *stack)
 {
 	return (stack -> top == stack -> capacity - 1);
 }
 
-int	stack_is_empty(struct s_stack *stack)
+int	stack_is_empty(t_stack *stack)
 {
 	return (stack -> top == -1);
 }
 
-void	push(struct s_stack* stack, int item)
+void	push(t_stack *stack, int item)
 {
 	if (stack_is_full(stack))
 		return ;
 	stack -> array[++stack-> top] = item;
 }
 
-int	pop(struct s_stack *stack)
+int	pop(t_stack *stack)
 {
 	if (stack_is_empty(stack))
 		return (INT_MIN);
 	return (stack->array[stack->top--]);
 }
 
-int	peek(struct s_stack *stack)
+int	peek(t_stack *stack)
 {
 	if (stack_is_empty(stack))
 		return (INT_MIN);
 	return (stack -> array[stack -> top]);
 }
 
-int		main()
+void	fill_a(int argc, char **argv, t_stack *a)
 {
-	struct s_stack *stack = create_stack(1);
-
-	push(stack, 10);
-	push(stack, 20);
-	push(stack, 30);
-	push(stack, 40);
-	push(stack, 50);
-	printf("%d popped from stack\n", pop(stack));
-	printf("top item is %d\n", peek(stack));
-    return (0);
+	
+	while(argc > 1)
+	{
+		push(a, atoi(argv[argc - 1]));
+		argc--;
+	}
 }
+
+int		main(int argc, char *argv[])
+{
+
+	t_stack *a = create_stack(100);
+	t_stack *b = create_stack(100);
+	fill_a(argc, argv, a);
+	fill_a(argc, argv, b);
+	// push(a, 10);
+	// push(a, 20);
+	// push(a, 30);
+	// push(a, 40);
+	// push(a, 50);
+	
+	// push(b, 10);
+	// push(b, 20);
+	// push(b, 30);
+	// push(b, 40);
+	// push(b, 50);
+	// printf("%d popped from stack\n", pop(stack));
+	// printf("top item is %d\n", peek(stack));
+	swap_a(a, 0);
+	swap_b(b, 0);
+	stack_display(*a);
+	
+	return (0);
+}
+
