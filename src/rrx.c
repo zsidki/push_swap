@@ -6,7 +6,7 @@
 /*   By: zsidki <zsidki@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/06 14:48:10 by zsidki            #+#    #+#             */
-/*   Updated: 2021/07/07 16:59:10 by zsidki           ###   ########.fr       */
+/*   Updated: 2021/07/12 15:28:21 by zsidki           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 static void    reverse_rotate(t_stack *stack)
 {
     int tmp;
-    
     int j;
 
     tmp = stack->array[0];
@@ -31,13 +30,13 @@ static void    reverse_rotate(t_stack *stack)
 void    rra(t_stack *a)
 {
     reverse_rotate(a);
-    write(1, "rra\n", 3);
+    write(1, "rra\n", 4);
 }
 
 void    rrb(t_stack *b)
 {
     reverse_rotate(b);
-    write(1, "rrb\n", 3);
+    write(1, "rrb\n", 4);
 }
 
 void    rrr(t_stack *a, t_stack *b)

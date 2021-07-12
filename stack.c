@@ -6,7 +6,7 @@
 /*   By: zsidki <zsidki@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/28 17:51:59 by zsidki            #+#    #+#             */
-/*   Updated: 2021/07/07 17:25:09 by zsidki           ###   ########.fr       */
+/*   Updated: 2021/07/12 15:26:32 by zsidki           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,6 @@ void	stack_display(t_stack stack)
 {
 	int i;
 	i = stack.top;
-
 	printf("******\n");
 	while(i >= 0)
 		printf("%d\n", stack.array[i--]);
@@ -72,7 +71,6 @@ int	peek(t_stack *stack)
 
 void	fill_a(int argc, char **argv, t_stack *a)
 {
-	
 	while(argc > 1)
 	{
 		push(a, atoi(argv[argc - 1]));
@@ -88,24 +86,14 @@ int		main(int argc, char *argv[])
 	fill_a(argc, argv, a);
 	// fill_a(argc, argv, b);
 	// push(a, 10);
-	// push(a, 20);
-	// push(a, 30);
-	// push(a, 40);
-	// push(a, 50);
-	
-	// push(b, 10);
-	// push(b, 20);
-	// push(b, 30);
-	// push(b, 40);
-	// push(b, 50);
 	//printf("%d popped from stack\n", pop(a));
 	// printf("top item is %d\n", peek(stack));
 	// swap_a(a, 0);
 	// swap_b(b, 0);
 	// rra(a);
 	stack_display(*b);
-	pb(a, b);
-	
+	//pb(a, b);
+	ft_sort_3(a);
 	stack_display(*a);
 	stack_display(*b);
 	
