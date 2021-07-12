@@ -6,7 +6,7 @@
 /*   By: zsidki <zsidki@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/06 14:48:13 by zsidki            #+#    #+#             */
-/*   Updated: 2021/07/07 16:56:31 by zsidki           ###   ########.fr       */
+/*   Updated: 2021/07/12 16:19:03 by zsidki           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 static void    rotate(t_stack *stack)
 {
     int tmp;
-    
     int j;
 
     tmp = peek(stack);

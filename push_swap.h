@@ -6,7 +6,7 @@
 /*   By: zsidki <zsidki@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/06 16:16:05 by zsidki            #+#    #+#             */
-/*   Updated: 2021/07/12 15:24:25 by zsidki           ###   ########.fr       */
+/*   Updated: 2021/07/12 20:15:27 by zsidki           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,5 +46,6 @@ void    rrr(t_stack *a, t_stack *b);
 void    pa(t_stack *stack_a, t_stack *stack_b);
 void    pb(t_stack *stack_a, t_stack *stack_b);
 void     ft_sort_3(t_stack *a);
+void     ft_sort_5(t_stack *a, t_stack *b);
 
 #endif

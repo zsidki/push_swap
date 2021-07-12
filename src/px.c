@@ -6,7 +6,7 @@
 /*   By: zsidki <zsidki@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/06 14:48:07 by zsidki            #+#    #+#             */
-/*   Updated: 2021/07/07 17:25:51 by zsidki           ###   ########.fr       */
+/*   Updated: 2021/07/12 20:27:30 by zsidki           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,12 +23,12 @@ static void    push_x(t_stack *stack_a, t_stack *stack_b)
 
 void    pa(t_stack *stack_a, t_stack *stack_b)
 {
-    push_x(stack_a, stack_b);
+    push_x(stack_b, stack_a);
     write(1, "pa\n", 3);
 }
 
 void    pb(t_stack *stack_a, t_stack *stack_b)
 {
-    push_x(stack_b, stack_a);
+    push_x(stack_a, stack_b);
     write(1, "pb\n", 3);
 }

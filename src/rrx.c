@@ -6,7 +6,7 @@
 /*   By: zsidki <zsidki@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/06 14:48:10 by zsidki            #+#    #+#             */
-/*   Updated: 2021/07/12 15:28:21 by zsidki           ###   ########.fr       */
+/*   Updated: 2021/07/12 16:18:02 by zsidki           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,5 @@ void    rrr(t_stack *a, t_stack *b)
 {
     reverse_rotate(a);
     reverse_rotate(b);
-    printf("rrr\n");
+    write(1, "rrr\n", 4);
 }
-

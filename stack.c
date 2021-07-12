@@ -6,7 +6,7 @@
 /*   By: zsidki <zsidki@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/28 17:51:59 by zsidki            #+#    #+#             */
-/*   Updated: 2021/07/12 15:26:32 by zsidki           ###   ########.fr       */
+/*   Updated: 2021/07/12 20:27:48 by zsidki           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,9 +91,11 @@ int		main(int argc, char *argv[])
 	// swap_a(a, 0);
 	// swap_b(b, 0);
 	// rra(a);
-	stack_display(*b);
-	//pb(a, b);
-	ft_sort_3(a);
+	// stack_display(*b);
+	// pa(a, b);
+
+
+	ft_sort_5(a, b);
 	stack_display(*a);
 	stack_display(*b);
 	
