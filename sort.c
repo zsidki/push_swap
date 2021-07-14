@@ -106,9 +106,6 @@ z w
 4  - 3 + 1 = 2
 
 2
-.
-.
-.
 6
 9 1 3 7 10
 
@@ -157,5 +154,17 @@ ra
 ra
 ra
 
+
+stack A : 2 5 4 1 3
+min1 = 1
+if (pos[min1] < size_a/2)
+-> ra ->> min1 (pos = top) -> pb
+else
+-> rra ->> min1 (pos = top) -> pb
+
+sort_3num
+
+pa
+pa
 
 */
