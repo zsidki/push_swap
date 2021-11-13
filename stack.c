@@ -6,7 +6,7 @@
 /*   By: zsidki <zsidki@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/28 17:51:59 by zsidki            #+#    #+#             */
-/*   Updated: 2021/07/12 20:27:48 by zsidki           ###   ########.fr       */
+/*   Updated: 2021/11/13 01:36:50 by zsidki           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,15 +84,16 @@ int		main(int argc, char *argv[])
 	t_stack *a = create_stack(100);
 	t_stack *b = create_stack(100);
 	fill_a(argc, argv, a);
-	// fill_a(argc, argv, b);
-	// push(a, 10);
-	//printf("%d popped from stack\n", pop(a));
-	// printf("top item is %d\n", peek(stack));
-	// swap_a(a, 0);
-	// swap_b(b, 0);
-	// rra(a);
-	// stack_display(*b);
-	// pa(a, b);
+    // char x;
+    // char y;
+    // x = 1;
+    // y = 2;
+    
+    // if(x&y)
+    //     printf("result of x&y is 1");
+    // if(x&&y)
+    //     printf("result of x&&y is 1");
+    // return 0;
 
 
 	ft_sort_5(a, b);

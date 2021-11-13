@@ -6,7 +6,7 @@
 /*   By: zsidki <zsidki@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/06 16:16:05 by zsidki            #+#    #+#             */
-/*   Updated: 2021/07/12 20:15:27 by zsidki           ###   ########.fr       */
+/*   Updated: 2021/11/12 00:41:57 by zsidki           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,13 +27,14 @@ typedef struct s_stack
 
 
 struct	s_stack *create_stack(unsigned capacity);
-int	stack_size(t_stack stack);
+int 	find_smallest_bigger(t_stack *a, int *min_index);
+int		stack_size(t_stack stack);
 void	stack_display(t_stack stack);
-int	stack_is_full(t_stack *stack);
-int	stack_is_empty(t_stack *stack);
+int		stack_is_full(t_stack *stack);
+int		stack_is_empty(t_stack *stack);
 void	push(t_stack *stack, int item);
-int	pop(t_stack *stack);
-int	peek(t_stack *stack);
+int		pop(t_stack *stack);
+int		peek(t_stack *stack);
 void    sa(t_stack *stack, int i);
 void    sb(t_stack *stack, int i);
 void    ss(t_stack *a, t_stack *b);
@@ -45,7 +46,11 @@ void    rrb(t_stack *b);
 void    rrr(t_stack *a, t_stack *b);
 void    pa(t_stack *stack_a, t_stack *stack_b);
 void    pb(t_stack *stack_a, t_stack *stack_b);
-void     ft_sort_3(t_stack *a);
-void     ft_sort_5(t_stack *a, t_stack *b);
+void    push_to_top(t_stack *s, int index, int nb);
+void	ft_sort_3(t_stack *a);
+void	ft_sort_4(t_stack *a, t_stack *b);
+void	ft_sort_5(t_stack *a, t_stack *b);
+
+
 
 #endif
