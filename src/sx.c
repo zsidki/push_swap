@@ -6,7 +6,7 @@
 /*   By: zsidki <zsidki@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/06 14:48:16 by zsidki            #+#    #+#             */
-/*   Updated: 2021/07/12 16:24:10 by zsidki           ###   ########.fr       */
+/*   Updated: 2021/11/14 14:46:38 by zsidki           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void    sa(t_stack *stack, int i)
 {
     int tmp;
 
-    if (stack_size(*stack) >= 2)
+    if (stack_size(stack) >= 2)
     {
     tmp = peek(stack);
     stack->array[stack->top] = stack->array[stack->top - 1];
@@ -30,7 +30,7 @@ void    sb(t_stack *stack, int i)
 {
     int tmp;
 
-    if (stack_size(*stack) >= 2)
+    if (stack_size(stack) >= 2)
     {
     tmp = peek(stack);
     stack->array[stack->top] = stack->array[stack->top - 1];

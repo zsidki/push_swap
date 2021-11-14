@@ -6,7 +6,7 @@
 /*   By: zsidki <zsidki@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/06 16:16:05 by zsidki            #+#    #+#             */
-/*   Updated: 2021/11/12 00:41:57 by zsidki           ###   ########.fr       */
+/*   Updated: 2021/11/14 15:48:10 by zsidki           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,8 +27,8 @@ typedef struct s_stack
 
 
 struct	s_stack *create_stack(unsigned capacity);
-int 	find_smallest_bigger(t_stack *a, int *min_index);
-int		stack_size(t_stack stack);
+int 	find_smallest_index(t_stack *a, int *min_index);
+int		stack_size(t_stack *stack);
 void	stack_display(t_stack stack);
 int		stack_is_full(t_stack *stack);
 int		stack_is_empty(t_stack *stack);
@@ -50,7 +50,8 @@ void    push_to_top(t_stack *s, int index, int nb);
 void	ft_sort_3(t_stack *a);
 void	ft_sort_4(t_stack *a, t_stack *b);
 void	ft_sort_5(t_stack *a, t_stack *b);
-
+void    order_radix(t_stack *a, t_stack *b);
+void    ft_sort_2(t_stack *a);
 
 
 #endif
