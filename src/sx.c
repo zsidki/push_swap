@@ -6,7 +6,7 @@
 /*   By: zsidki <zsidki@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/06 14:48:16 by zsidki            #+#    #+#             */
-/*   Updated: 2021/11/14 14:46:38 by zsidki           ###   ########.fr       */
+/*   Updated: 2021/11/17 23:00:32 by zsidki           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 void    sa(t_stack *stack, int i)
 {
-    int tmp;
+    long tmp;
 
     if (stack_size(stack) >= 2)
     {
@@ -28,7 +28,7 @@ void    sa(t_stack *stack, int i)
 }
 void    sb(t_stack *stack, int i)
 {
-    int tmp;
+    long tmp;
 
     if (stack_size(stack) >= 2)
     {

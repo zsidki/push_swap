@@ -1,34 +1,45 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   px.c                                               :+:      :+:    :+:   */
+/*   check_stack.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zsidki <zsidki@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/07/06 14:48:07 by zsidki            #+#    #+#             */
-/*   Updated: 2021/11/17 23:00:16 by zsidki           ###   ########.fr       */
+/*   Created: 2021/11/18 18:50:07 by zsidki            #+#    #+#             */
+/*   Updated: 2021/11/18 18:51:28 by zsidki           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap.h"
+#include "push_swap.h"
 
-static void    push_x(t_stack *stack_a, t_stack *stack_b)
+int	stack_is_full(t_stack *stack)
 {
-    long tmp;
-    
-    tmp = pop(stack_a);
-    if(tmp != LONG_MIN)
-    push(stack_b, tmp);
+	return (stack -> top == stack -> capacity - 1);
 }
 
-void    pa(t_stack *stack_a, t_stack *stack_b)
+int	stack_is_empty(t_stack *stack)
 {
-    push_x(stack_b, stack_a);
-    write(1, "pa\n", 3);
+	return (stack -> top == -1);
 }
 
-void    pb(t_stack *stack_a, t_stack *stack_b)
+int	check_num(char *str)
 {
-    push_x(stack_a, stack_b);
-    write(1, "pb\n", 3);
+	int	i;
+
+	i = 0;
+	if (str[i] == '-' || str[i] == '+')
+		i++;
+	while (str[i])
+	{
+		if (str[i] < '0' || str[i] > '9')
+			return (0);
+		i++;
+	}
+	return (1);
+}
+
+void	error(void)
+{
+	write(1, "Error\n", 7);
+	exit(1);
 }

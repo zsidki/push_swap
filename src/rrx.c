@@ -6,7 +6,7 @@
 /*   By: zsidki <zsidki@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/06 14:48:10 by zsidki            #+#    #+#             */
-/*   Updated: 2021/07/12 16:18:02 by zsidki           ###   ########.fr       */
+/*   Updated: 2021/11/17 23:00:21 by zsidki           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 static void    reverse_rotate(t_stack *stack)
 {
-    int tmp;
+    long tmp;
     int j;
 
     tmp = stack->array[0];

@@ -6,7 +6,7 @@
 /*   By: zsidki <zsidki@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/10 16:10:14 by zsidki            #+#    #+#             */
-/*   Updated: 2021/11/14 15:47:17 by zsidki           ###   ########.fr       */
+/*   Updated: 2021/11/18 18:59:43 by zsidki           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,10 +46,10 @@ void     ft_sort_3(t_stack *a)
     }
 }
 
-int find_smallest_index(t_stack *a, int *min_index)
+long find_smallest_index(t_stack *a, long *min_index)
 {
     int i;
-    int min;
+    long min;
  
     min = a->array[0];
     i = 0;
@@ -63,10 +63,10 @@ int find_smallest_index(t_stack *a, int *min_index)
     return (min);
 }
 
-int find_biggest_index(t_stack *a)
+long find_biggest_index(t_stack *a)
 {
     int i;
-    int max;
+    long max;
  
     max = a->array[0];
     i = 0;
@@ -93,8 +93,8 @@ void    push_to_top(t_stack *s, int index, int nb)
 
 void     ft_sort_4(t_stack *a, t_stack *b)
 {
-    int min_index;
-    int min;
+    long min_index;
+    long min;
 
     min = find_smallest_index(a, &min_index);
     push_to_top(a, min_index, min);
@@ -106,8 +106,8 @@ void     ft_sort_4(t_stack *a, t_stack *b)
 
 void     ft_sort_5(t_stack *a, t_stack *b)
 {
-    int min_index;
-    int min;
+    long min_index;
+    long min;
 
     min = find_smallest_index(a, &min_index);
     push_to_top(a, min_index, min);
@@ -118,16 +118,18 @@ void     ft_sort_5(t_stack *a, t_stack *b)
 
 static void sort_radix(t_stack *a, t_stack *b, int size) 
 {
-    int max_num;
+    long max_num;
     int max_bits;
     int i;
     int j;
-    int num;
+    long num;
 
     i = 0;
     max_num = find_biggest_index(a);
+    printf("A %ld\n", max_num);
+
     max_bits = 0;
-    // printf("b %d\n", max_num);
+     //printf("b %d\n", max_num);
     while ((max_num >> max_bits) != 0) 
         ++max_bits;
     while (i < max_bits)
@@ -151,9 +153,10 @@ static void sort_radix(t_stack *a, t_stack *b, int size)
 void    order_radix(t_stack *a, t_stack *b)
 {
     int i;
-    int min;
+    long min;
 
     min = -find_smallest_index(a, &min);
+    printf("%ld\n", min);
     i = 0;
     while (i <= a->top) 
     {
@@ -164,7 +167,9 @@ void    order_radix(t_stack *a, t_stack *b)
     i = 0;
     while (i <= a->top) 
     {
+        // printf("B %ld\n", a->array[i]);
         a->array[i] -= min;
+        // printf("A %ld\n", a->array[i]);
         i++;
     }
 

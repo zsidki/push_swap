@@ -1,34 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   px.c                                               :+:      :+:    :+:   */
+/*   push_pop_peek.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zsidki <zsidki@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/07/06 14:48:07 by zsidki            #+#    #+#             */
-/*   Updated: 2021/11/17 23:00:16 by zsidki           ###   ########.fr       */
+/*   Created: 2021/11/18 18:52:05 by zsidki            #+#    #+#             */
+/*   Updated: 2021/11/18 18:52:41 by zsidki           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap.h"
+#include "push_swap.h"
 
-static void    push_x(t_stack *stack_a, t_stack *stack_b)
+void	push(t_stack *stack, long item)
 {
-    long tmp;
-    
-    tmp = pop(stack_a);
-    if(tmp != LONG_MIN)
-    push(stack_b, tmp);
+	if (stack_is_full(stack))
+		return ;
+	stack -> array[++stack-> top] = item;
 }
 
-void    pa(t_stack *stack_a, t_stack *stack_b)
+long	pop(t_stack *stack)
 {
-    push_x(stack_b, stack_a);
-    write(1, "pa\n", 3);
+	if (stack_is_empty(stack))
+		return (LONG_MIN);
+	return (stack->array[stack->top--]);
 }
 
-void    pb(t_stack *stack_a, t_stack *stack_b)
+long	peek(t_stack *stack)
 {
-    push_x(stack_a, stack_b);
-    write(1, "pb\n", 3);
+	if (stack_is_empty(stack))
+		return (LONG_MIN);
+	return (stack -> array[stack -> top]);
 }
