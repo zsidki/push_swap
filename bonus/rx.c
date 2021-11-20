@@ -1,34 +1,44 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   px.c                                               :+:      :+:    :+:   */
+/*   rx.c                                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zsidki <zsidki@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/07/06 14:48:07 by zsidki            #+#    #+#             */
-/*   Updated: 2021/11/20 16:25:00 by zsidki           ###   ########.fr       */
+/*   Created: 2021/07/06 14:48:13 by zsidki            #+#    #+#             */
+/*   Updated: 2021/11/19 21:37:05 by zsidki           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap.h"
+#include "push_swap_bonus.h"
 
-static void    push_x(t_stack *stack_a, t_stack *stack_b)
+static void    rotate_bonus(t_stack *stack)
 {
     long tmp;
-    
-    tmp = pop(stack_a);
-    if(tmp != LONG_MIN)
-    push(stack_b, tmp);
+    int j;
+
+    tmp = peek(stack);
+    j = stack->top;
+    while(j > 0)
+    {
+        stack->array[j] = stack->array[j - 1];
+        j--;
+    }
+    stack->array[0] = tmp;
 }
 
-void    pa(t_stack *stack_a, t_stack *stack_b)
+void    ra_bonus(t_stack *a)
 {
-    push_x(stack_b, stack_a);
-    write(1, "pa\n", 4);
+    rotate_bonus(a);
 }
 
-void    pb(t_stack *stack_a, t_stack *stack_b)
+void    rb_bonus(t_stack *b)
 {
-    push_x(stack_a, stack_b);
-    write(1, "pb\n", 4);
+    rotate_bonus(b);
+}
+
+void    rr_bonus(t_stack *a, t_stack *b)
+{
+    rotate_bonus(a);
+    rotate_bonus(b);
 }

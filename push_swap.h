@@ -6,7 +6,7 @@
 /*   By: zsidki <zsidki@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/06 16:16:05 by zsidki            #+#    #+#             */
-/*   Updated: 2021/11/18 19:17:07 by zsidki           ###   ########.fr       */
+/*   Updated: 2021/11/19 17:15:27 by zsidki           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,5 +56,8 @@ void    ft_sort_2(t_stack *a);
 void	error(void);
 int		check_num(char *str);
 void	check_min_max(char *str);
+void 	sort_radix(t_stack *a, t_stack *b, int size);
+long	find_smallest_index(t_stack *a, long *min_index);
+long 	find_biggest_index(t_stack *a);
 
 #endif

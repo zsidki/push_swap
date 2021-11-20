@@ -6,13 +6,13 @@
 /*   By: zsidki <zsidki@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/06 14:48:10 by zsidki            #+#    #+#             */
-/*   Updated: 2021/11/20 16:28:24 by zsidki           ###   ########.fr       */
+/*   Updated: 2021/11/19 21:37:03 by zsidki           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap.h"
+#include "push_swap_bonus.h"
 
-static void    reverse_rotate(t_stack *stack)
+static void    reverse_rotate_bonus(t_stack *stack)
 {
     long tmp;
     int j;
@@ -27,21 +27,18 @@ static void    reverse_rotate(t_stack *stack)
     stack->array[stack->top] = tmp;
 }
 
-void    rra(t_stack *a)
+void    rra_bonus(t_stack *a)
 {
-    reverse_rotate(a);
-    write(1, "rra\n", 5);
+    reverse_rotate_bonus(a);
 }
 
-void    rrb(t_stack *b)
+void    rrb_bonus(t_stack *b)
 {
-    reverse_rotate(b);
-    write(1, "rrb\n", 5);
+    reverse_rotate_bonus(b);
 }
 
-void    rrr(t_stack *a, t_stack *b)
+void    rrr_bonus(t_stack *a, t_stack *b)
 {
-    reverse_rotate(a);
-    reverse_rotate(b);
-    write(1, "rrr\n", 5);
+    reverse_rotate_bonus(a);
+    reverse_rotate_bonus(b);
 }

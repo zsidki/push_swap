@@ -6,7 +6,7 @@
 /*   By: zsidki <zsidki@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/06 14:48:04 by zsidki            #+#    #+#             */
-/*   Updated: 2021/11/18 18:44:57 by zsidki           ###   ########.fr       */
+/*   Updated: 2021/11/20 17:03:15 by zsidki           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,6 +64,21 @@ void	fill_a(int argc, char **argv, t_stack *a)
 	}
 }
 
+int	is_sorted_stack(t_stack stack)
+{
+	int	i;
+
+	i = -1;
+	if (stack.top < 0)
+		return (0);
+	while (++i < stack.top)
+	{
+		if (stack.array[i] < stack.array[i + 1])
+			return (0);
+	}
+	return (1);
+}
+
 int	main(int argc, char *argv[])
 {
 	t_stack	*a = create_stack(argc - 1);
@@ -80,7 +95,9 @@ int	main(int argc, char *argv[])
 		ft_sort_5(a, b);
 	else if (argc > 6)
 		order_radix(a, b);
-	stack_display(*a);
-	//stack_display(*b);
+	// stack_display(*b);
+	// printf ("%d\n", is_sorted_stack(*a));
+	//system("leaks push_swap");
 	return (0);
 }
+

@@ -6,7 +6,7 @@
 /*   By: zsidki <zsidki@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/06 14:48:13 by zsidki            #+#    #+#             */
-/*   Updated: 2021/11/17 22:59:58 by zsidki           ###   ########.fr       */
+/*   Updated: 2021/11/20 16:24:41 by zsidki           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,18 +30,18 @@ static void    rotate(t_stack *stack)
 void    ra(t_stack *a)
 {
     rotate(a);
-    write(1, "ra\n", 3);
+    write(1, "ra\n", 4);
 }
 
 void    rb(t_stack *b)
 {
     rotate(b);
-    write(1, "rb\n", 3);
+    write(1, "rb\n", 4);
 }
 
 void    rr(t_stack *a, t_stack *b)
 {
     rotate(a);
     rotate(b);
-    printf("rr\n");
+    write(1, "rr\n", 4);
 }
