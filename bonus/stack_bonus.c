@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   stack.c                                            :+:      :+:    :+:   */
+/*   stack_bonus.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zsidki <zsidki@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/06/28 17:51:59 by zsidki            #+#    #+#             */
-/*   Updated: 2021/11/25 14:36:23 by zsidki           ###   ########.fr       */
+/*   Created: 2021/11/23 21:01:47 by zsidki            #+#    #+#             */
+/*   Updated: 2021/11/23 21:03:09 by zsidki           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "push_swap_bonus.h"
 
 struct	s_stack	*create_stack(unsigned int capacity)
 {
@@ -28,13 +28,12 @@ int	stack_size(t_stack *stack)
 	return (stack->top + 1);
 }
 
-// void	stack_display(t_stack stack)
-// {
-// 	int	i;
+int	stack_is_full(t_stack *stack)
+{
+	return (stack -> top == stack -> capacity - 1);
+}
 
-// 	i = stack.top;
-// 	printf("******\n");
-// 	while (i >= 0)
-// 		printf("%ld\n", stack.array[i--]);
-// 	printf("******\n");
-// }
+int	stack_is_empty(t_stack *stack)
+{
+	return (stack -> top == -1);
+}

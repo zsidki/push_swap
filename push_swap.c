@@ -6,7 +6,7 @@
 /*   By: zsidki <zsidki@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/06 14:48:04 by zsidki            #+#    #+#             */
-/*   Updated: 2021/11/20 17:03:15 by zsidki           ###   ########.fr       */
+/*   Updated: 2021/11/25 14:56:06 by zsidki           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,12 @@
 
 void	check_min_max(char *str)
 {
-	int	i;
-
-	i = 0;
+	int			i;
 	const char	*max_int = "2147483647";
 	const char	*min_int = "-2147483648";
 	const char	*min_max;
 
+	i = 0;
 	if (ft_strlen(str) > 11 || (ft_strlen(str) == 11
 			&& str[0] != '-' && str[0] != '+'))
 		error();
@@ -81,9 +80,11 @@ int	is_sorted_stack(t_stack stack)
 
 int	main(int argc, char *argv[])
 {
-	t_stack	*a = create_stack(argc - 1);
-	t_stack	*b = create_stack(argc - 1);
+	t_stack	*a;
+	t_stack	*b;
 
+	a = create_stack(argc - 1);
+	b = create_stack(argc - 1);
 	fill_a(argc, argv, a);
 	if (argc == 3)
 		ft_sort_2(a);
@@ -95,9 +96,8 @@ int	main(int argc, char *argv[])
 		ft_sort_5(a, b);
 	else if (argc > 6)
 		order_radix(a, b);
-	// stack_display(*b);
-	// printf ("%d\n", is_sorted_stack(*a));
+	//stack_display(*a);
+	//printf ("%d\n", is_sorted_stack(*a));
 	//system("leaks push_swap");
 	return (0);
 }
-

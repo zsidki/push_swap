@@ -6,12 +6,11 @@
 /*   By: zsidki <zsidki@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/18 18:22:57 by zsidki            #+#    #+#             */
-/*   Updated: 2021/11/20 17:10:25 by zsidki           ###   ########.fr       */
+/*   Updated: 2021/11/25 15:00:47 by zsidki           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap_bonus.h"
-
 
 int	ft_is_equal(char *s1, char *s2)
 {
@@ -39,20 +38,11 @@ int	do_operations(t_stack *a, t_stack *b, char *line)
 	else if (ft_is_equal(line, "ss"))
 		ss_bonus(a, b);
 	else if (ft_is_equal(line, "pa"))
-	{
-		// printf("%s\n", line);
 		pa_bonus(a, b);
-	}
 	else if (ft_is_equal(line, "pb"))
-	{
-		// printf("%s\n", line);
 		pb_bonus(a, b);
-	}
 	else if (ft_is_equal(line, "ra"))
-	{
-		// printf("%s\n", line);
 		ra_bonus(a);
-	}
 	else if (ft_is_equal(line, "rb"))
 		rb_bonus(b);
 	else if (ft_is_equal(line, "rr"))
@@ -88,10 +78,10 @@ void	stack_display(t_stack stack)
 	int	i;
 
 	i = stack.top;
-	printf("******\n");
+	write(1, "******\n", 7);
 	while (i >= 0)
 		printf("%ld\n", stack.array[i--]);
-	printf("******\n");
+	write(1, "******\n", 7);
 }
 
 int	main(int argc, char *argv[])
@@ -114,10 +104,9 @@ int	main(int argc, char *argv[])
 			free(line);
 	}
 	if (is_sorted_stack(*a) && stack_size(b) == 0)
-        write (1, "OK\n", 3);
+		write (1, "OK\n", 3);
 	else
-		 write (1, "KO\n", 3);
-	// stack_display(*a);
+		write (1, "KO\n", 3);
 	if (line)
 		free(line);
 	return (0);
