@@ -6,7 +6,7 @@
 /*   By: zsidki <zsidki@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/18 18:50:07 by zsidki            #+#    #+#             */
-/*   Updated: 2021/11/19 20:45:11 by zsidki           ###   ########.fr       */
+/*   Updated: 2021/11/27 07:06:24 by zsidki           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,21 @@ int	stack_is_full(t_stack *stack)
 int	stack_is_empty(t_stack *stack)
 {
 	return (stack -> top == -1);
+}
+
+int	is_sorted_stack(t_stack stack)
+{
+	int	i;
+
+	i = -1;
+	if (stack.top < 0)
+		return (0);
+	while (++i < stack.top)
+	{
+		if (stack.array[i] < stack.array[i + 1])
+			return (0);
+	}
+	return (1);
 }
 
 int	check_num(char *str)

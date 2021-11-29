@@ -6,7 +6,7 @@
 /*   By: zsidki <zsidki@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/18 18:22:57 by zsidki            #+#    #+#             */
-/*   Updated: 2021/11/25 15:00:47 by zsidki           ###   ########.fr       */
+/*   Updated: 2021/11/27 08:54:38 by zsidki           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,16 +73,16 @@ int	is_sorted_stack(t_stack stack)
 	return (1);
 }
 
-void	stack_display(t_stack stack)
-{
-	int	i;
+// void	stack_display(t_stack stack)
+// {
+// 	int	i;
 
-	i = stack.top;
-	write(1, "******\n", 7);
-	while (i >= 0)
-		printf("%ld\n", stack.array[i--]);
-	write(1, "******\n", 7);
-}
+// 	i = stack.top;
+// 	write(1, "******\n", 7);
+// 	while (i >= 0)
+// 		printf("%ld\n", stack.array[i--]);
+// 	write(1, "******\n", 7);
+// }
 
 int	main(int argc, char *argv[])
 {

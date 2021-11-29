@@ -6,7 +6,7 @@
 /*   By: zsidki <zsidki@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/19 16:51:46 by zsidki            #+#    #+#             */
-/*   Updated: 2021/11/25 15:18:23 by zsidki           ###   ########.fr       */
+/*   Updated: 2021/11/27 07:05:22 by zsidki           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ static void	check_first_bit(t_stack *a, t_stack *b, int size, int i)
 	while (j < size)
 	{
 		num = peek(a);
-		if (((num >> i) & 1) == 1) //check first bit if = 1 ra if 0 send it to stack b
+		if (((num >> i) & 1) == 1)
 			ra(a);
 		else
 			pb(a, b);
@@ -38,7 +38,7 @@ void	sort_radix(t_stack *a, t_stack *b, int size)
 	i = 0;
 	max_num = find_biggest_index(a);
 	max_bits = 0;
-	while ((max_num >> max_bits) != 0)// calcule how much bits in max numbers // shift to remove whole numbers "1" to end with
+	while ((max_num >> max_bits) != 0)
 		++max_bits;
 	while (i < max_bits)
 	{

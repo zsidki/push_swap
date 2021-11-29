@@ -6,7 +6,7 @@
 #    By: zsidki <zsidki@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/06/24 18:54:19 by zsidki            #+#    #+#              #
-#    Updated: 2021/11/23 21:03:35 by zsidki           ###   ########.fr        #
+#    Updated: 2021/11/27 06:55:34 by zsidki           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -32,7 +32,7 @@ $(NAME): $(SRC)
 bonus: $(BONUS)
 
 $(BONUS): $(SRC_B)
-	make -C libft/ all
+	make -C libft/
 	@$(CC) $(FLAGS) $(SRC_B) libft/libft.a -o $(BONUS)
 
 clean:
