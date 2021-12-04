@@ -28,13 +28,13 @@ int	stack_size(t_stack *stack)
 	return (stack->top + 1);
 }
 
-// void	stack_display(t_stack stack)
-// {
-// 	int	i;
+void	stack_display(t_stack stack)
+{
+	int	i;
 
-// 	i = stack.top;
-// 	printf("******\n");
-// 	while (i >= 0)
-// 		printf("%ld\n", stack.array[i--]);
-// 	printf("******\n");
-// }
+	i = stack.top;
+	dprintf(2, "******\n");
+	while (i >= 0)
+		dprintf(2, "%ld\n", stack.array[i--]);
+	dprintf(2, "******\n");
+}

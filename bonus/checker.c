@@ -83,7 +83,15 @@ int	is_sorted_stack(t_stack stack)
 // 		printf("%ld\n", stack.array[i--]);
 // 	write(1, "******\n", 7);
 // }
-
+void print_stack(long array[], int n) {
+	int i = 0;
+	while (i < n)
+	{
+		dprintf(2, "%ld ", array[i]);
+		i++;
+	}
+	dprintf(2, "\n");
+}
 int	main(int argc, char *argv[])
 {
 	t_stack	*a;
@@ -103,6 +111,7 @@ int	main(int argc, char *argv[])
 		if (line)
 			free(line);
 	}
+	print_stack(a->array, a->capacity);
 	if (is_sorted_stack(*a) && stack_size(b) == 0)
 		write (1, "OK\n", 3);
 	else
