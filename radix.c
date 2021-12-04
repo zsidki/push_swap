@@ -42,8 +42,8 @@ void	sort_radix(t_stack *a, t_stack *b, int size)
 		++max_bits;
 	while (i < max_bits)
 	{
-		// if (is_sorted_stack(*a))
-		// 	return ;
+		if (is_sorted_stack(*a))
+			return ;
 		check_first_bit(a, b, size, i);
 		while (!stack_is_empty(b))
 			pa(a, b);
@@ -57,61 +57,67 @@ void swap(long *xp, long *yp)
     *xp = *yp;
     *yp = temp;
 }
+
 void bubbleSort(long arr[], long new_arr[], int n)
 {
-    int i, j;
-    for (i = 0; i < n-1; i++) {
-		for (j = 0; j < n-i-1; j++) {
+    int i;
+	int j;
+
+	i = 0;
+    while (i < n-1)
+	{
+		j = 0;
+		while (j < n-i-1)
+		{
 			if (arr[j] > arr[j+1]) {
 				swap(&arr[j], &arr[j+1]);
 				swap(&new_arr[j], &new_arr[j+1]);
 			}
+			j++;
 		}
-	}
-}
-
-void print_stack(long array[], int n) {
-	int i = 0;
-	while (i < n)
-	{
-		dprintf(2, "%ld ", array[i]);
 		i++;
 	}
-	dprintf(2, "\n");
 }
 
 void change_stack_index(t_stack *a) {
 	long *new_arr;
 	int i;
+	// a			= 6 2 7 1 3 5
+	// new_arr		= 0 1 2 3 4 5
+	// achno bghina	= 3 1 4 0 2
 
+	// sorted a			= 4 1 5 0 2 3
+	// sorted new_arr	= 3 1 4 5 0 2
 	new_arr = malloc(sizeof(long) * a->capacity);
 	i = 0;
-	while (i < a->capacity) {
+	while (i < a->capacity)
+	{
 		new_arr[i] = i;
 		i++;
 	}
-	// print_stack(a->array, a->capacity);
-	// print_stack(new_arr, a->capacity);
-	bubbleSort(a->array, new_arr, a->capacity);
-	for (int idx = 0; idx < a->capacity; idx++) {
-		a->array[new_arr[idx]] = idx;
+	bubbleSort(a->array, new_arr, a->capacity); //
+	i = 0;
+	while (i < a->capacity) {
+		dprintf(2, "%ld ", a->array[i]);
+		i++;
 	}
-	// print_stack(a->array, a->capacity);
-	// print_stack(new_arr, a->capacity);
-	// free(a->array);
-	// a->array = new_arr;
+	dprintf(2, "\n");
+	i = 0;
+	while (i < a->capacity) {
+		dprintf(2, "%ld ", new_arr[i]);
+		i++;
+	}
+	i = 0;
+	while (i < a->capacity)
+	{
+		a->array[new_arr[i]] = i;
+		i++;
+	}
+	free(new_arr);
 }
 
 void	order_radix(t_stack *a, t_stack *b)
 {
-
-	// b = NULL;
 	change_stack_index(a);
-	// stack_display(*a);
 	sort_radix(a, b, stack_size(a));
-	// for (int i = 0; i < a->capacity / 2; i++) {
-	// 	swap(&a->array[i], &a->array[a->capacity - i - 1]);
-	// }
-	// stack_display(*a);
-	// dprintf(2, "%d\n", a->top);
 }
