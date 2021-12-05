@@ -8,11 +8,15 @@ Resource
 - [https://en.wikipedia.org/wiki/Analysis_of_algorithms]
 - [https://www.learn-c.org/en/Linked_lists]
 - [https://www.log2base2.com/data-structures/stack/stack-using-linked-list.html]
-- [https://stackoverflow.com/questions/15306665/radix-sort-for-negative-integers]
+- (radix sort )[https://stackoverflow.com/questions/15306665/radix-sort-for-negative-integers]
 - [https://www.youtube.com/watch?v=jlQmeyce65Q&ab_channel=NesoAcademy]
 - [https://bit-calculator.com/bit-shift-calculator]
 - [https://www.youtube.com/watch?v=egU3YD8OKbw&t=51s]
+- (Bubble Sort) [https://www.geeksforgeeks.org/bubble-sort/]
 - (Tester run commend bash test.sh) [https://githubmemory.com/repo/rizky/42-push_swap]
+- (Tester 2 push_swap) [https://github.com/lmalki-h/push_swap_tester]
+- (Page correction) [https://drive.google.com/file/d/1RetzmqPGG9y-mX1QMM7t5wLtgkvzZuaI/view]
+- push_swap_visualizer [https://github.com/o-reo/push_swap_visualizer]
 
 
 
