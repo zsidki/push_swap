@@ -13,6 +13,7 @@ Resource
 - [https://bit-calculator.com/bit-shift-calculator]
 - [https://www.youtube.com/watch?v=egU3YD8OKbw&t=51s]
 - (Bubble Sort) [https://www.geeksforgeeks.org/bubble-sort/]
+- (Bubble Sort) [https://www.youtube.com/watch?v=Jdtq5uKz-w4&ab_channel=mycodeschool]
 - (Tester run commend bash test.sh) [https://githubmemory.com/repo/rizky/42-push_swap]
 - (Tester 2 push_swap) [https://github.com/lmalki-h/push_swap_tester]
 - (Page correction) [https://drive.google.com/file/d/1RetzmqPGG9y-mX1QMM7t5wLtgkvzZuaI/view]
