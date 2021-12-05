@@ -11,3 +11,9 @@ Resource
 - [https://stackoverflow.com/questions/15306665/radix-sort-for-negative-integers]
 - [https://www.youtube.com/watch?v=jlQmeyce65Q&ab_channel=NesoAcademy]
 - [https://bit-calculator.com/bit-shift-calculator]
+- [https://www.youtube.com/watch?v=egU3YD8OKbw&t=51s]
+- (Tester run commend bash test.sh) [https://githubmemory.com/repo/rizky/42-push_swap]
+
+
+
+<img width="783" alt="Tester push_swap zsidki" src="https://user-images.githubusercontent.com/58993412/144735596-1f5a74ce-0643-439c-8b67-d002b779afbc.png">
