@@ -83,6 +83,5 @@ int	main(int argc, char *argv[])
 		ft_sort_5(a, b);
 	else if (argc > 6)
 		order_radix(a, b);
-	// system("leaks push_swap");
 	return (0);
 }

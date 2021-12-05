@@ -6,7 +6,7 @@
 /*   By: zsidki <zsidki@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/06 16:16:05 by zsidki            #+#    #+#             */
-/*   Updated: 2021/11/27 07:05:19 by zsidki           ###   ########.fr       */
+/*   Updated: 2021/12/05 03:02:26 by zsidki           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,5 +61,8 @@ void			sort_radix(t_stack *a, t_stack *b, int size);
 long			find_smallest_index(t_stack *a, long *min_index);
 long			find_biggest_index(t_stack *a);
 int				is_sorted_stack(t_stack stack);
+void			change_stack_index(t_stack *a);
+void			bubblesort(long *arr, long *new_arr, int n);
+void			swap(long *xp, long *yp);
 
 #endif
